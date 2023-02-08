@@ -6,7 +6,25 @@
         header("Location: ../Myaccount.blade.php");
         exit;
       }
-      
+
+      require_once '../../../vendor/autoload.php';
+
+
+
+      // init configuration
+      $clientID = '1074084558413-cu90j25ah3b5c3pt321kcs8ljd829hc4.apps.googleusercontent.com';
+      $clientSecret = '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';
+      $redirectUri = "http://localhost/project/resources/php/googleadd.php";
+
+
+      // create Client Request to access Google API
+      $google_client = new Google_Client();
+      $google_client->setClientId($clientID);
+      $google_client->setClientSecret($clientSecret);
+      $google_client->setRedirectUri($redirectUri);
+      $google_client->addScope("email");
+      $google_client->addScope("profile");
+
 
 ?>
 
@@ -107,8 +125,8 @@
         <button >Log In</button>
         <a href="register.blade.php" style="margin-left: 80px;">New here? Sign-up</a>
         <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+           
+           <a style="margin: 0px auto;" href="../../php/google-signup.php" class="go"><i class="fab fa-google"></i>  Google</a>
         </div>
     </form>
     

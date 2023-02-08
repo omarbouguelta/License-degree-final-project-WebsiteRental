@@ -132,8 +132,7 @@ function validateForm() {
 
 
         <div class="social">
-           <div class="go"><i class="fab fa-google"></i>  Google</div>
-            <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div> 
+        <a style="margin: 0px auto 10px auto;" href="../../php/google-signup.php" class="go"><i class="fab fa-google"></i>  Google</a>
         </div>
         
         

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap'); </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuorial</title>
+
+    
+
+    <style>
+    
+    body{
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        background-image: url('');
+    }
+    
+    #next-button{
+        margin: 0;
+        color: white;
+        background: #f33c42 ; 
+        border: none;
+        border: none ;
+        border-radius: 5px ;
+        padding: 10px ;
+        width: 400px ;
+        font-size: 40px ;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #next-button:active{
+        width: 250px ;
+        
+    }
+
+    #slider { 
+    
+    margin-top: 200px;   
+    width: 100%;
+    height: 200px;
+    position: relative;
+    }
+
+    .slide {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    }
+
+    .slide.active {
+    display: block;
+    }
+
+
+    .slide.active {
+    animation: slide-animation 0.5s ease-in-out forwards;
+    }
+
+    @keyframes slide-animation {
+    from {
+        transform: translateX(100%);
+        }
+    to {
+        transform: translateX(0);
+        }
+    }
+
+
+    </style>
+
+   
+</head>
+<body>
+    
+    <div id="slider">
+        <div class="slide">
+
+            <h1>Welcome to our <h1 style="color: #f33c42;">Holiday Hub</h1></h1>
+
+        </div>
+        <div class="slide">
+            <h1>Find your perfect vacation home</h1>
+        </div>
+        <div class="slide">
+            <h1>Connect with hosts and book your stay</h1>
+        </div>
+        <div class="slide">
+
+            <h1>Experience the comfort of a home away from home</h1>
+
+        </div>
+        <div class="slide">
+            <h1>Discover new places and make lasting memories</h1>
+        </div>
+        <div class="slide">
+            <h1>Ready to plan your next vacation? Sign up now</h1>
+        </div>
+      </div>
+      <button id="next-button">Next</button>
+      
+</body>
+
+
+<script>
+    var slider = document.getElementById("slider");
+    var slides = document.getElementsByClassName("slide");
+    var currentSlide = 0;
+    var nextButton = document.getElementById("next-button");
+
+    // Show the first slide
+    slides[currentSlide].classList.add("active");
+
+    // Add event listener to the next button
+    nextButton.addEventListener("click", function() {
+    // Remove the active class from the current slide
+    slides[currentSlide].classList.remove("active");
+  
+     // Add the active class to the next slide
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  
+    if(currentSlide === slides.length-1){
+    nextButton.innerHTML = "Sign Up";
+    nextButton.addEventListener("click", function() {
+      window.location.href = "auth/register.blade.php";
+    });
+  }
+});
+
+
+</script>
+</html>

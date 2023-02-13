@@ -323,7 +323,7 @@ button{
 <body>
 <div class="top-nav">
         <a href="index.php">Home</a>
-        <a href="Porperty.blade.php">Properties</a>
+        <a href="Listings.blade.php">Properties</a>
         <a href="" class="logout-btn" onclick="return confirm('Are you sure you want to proceed?') ? logout() : false;">Logout</a>
       </div>
     <div id="image-div">

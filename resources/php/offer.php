@@ -8,7 +8,7 @@ if(isset($_POST['offer'])) {
     $sql = "UPDATE bookings SET status='$status' WHERE booking_id='$booking_id'";
     
     if(mysqli_query($conn, $sql)) {
-        echo "Record updated successfully";
+        header("Location: RetriveData.php");
     } else {
         echo "Error updating record: " . mysqli_error($conn);
     }

@@ -1,1 +1,1 @@
-DirectoryIndex index.php index.html
+DirectoryIndex resources/views/index.php index.html

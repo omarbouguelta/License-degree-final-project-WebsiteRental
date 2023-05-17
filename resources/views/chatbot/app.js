@@ -31,6 +31,13 @@ chatHeader.addEventListener("click",()=>{
 const renderUserMessage = () => {
   var userInput = txtInput.value;
   userInput = removeExtraSpaces(userInput);
+
+  // Check if user input is empty
+  if (!userInput) {
+    renderMessageEle("Is there anything I can help with?", "chatbot");
+    return;
+  }
+
   renderMessageEle(userInput, "user");
   txtInput.value = "";
   toggleloading(false);
@@ -63,7 +70,11 @@ const renderMessageEle = (txt, type) => {
 const getChatbotResponse = (userInput) => {
             chatBotService.getBotResponse(userInput)
             .then((response)=>{
-              renderMessageEle(response);
+              if (response === undefined) {
+                renderMessageEle("Sorry, I can't understand you", "chatbot");
+              } else {
+                renderMessageEle(response, "chatbot");
+              }
               setScrollPosition();
               toggleloading(true);
              

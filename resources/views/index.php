@@ -88,7 +88,7 @@
     }
 
     .image-elements h1{
-      font-size : 70px;
+      font-size : 69px;
       margin: 0px;
     }
 
@@ -132,7 +132,7 @@ window.addEventListener('scroll', () => {
   
 <div class="navbar">
   <img src="../media/pfe logo.png" class="logo">
-  <a href="#" class="right">Contact Us</a>
+  <a href="ContactUs.html" class="right">Contact Us</a>
   <a href="#" class="right">About Us</a>
   <a href="Myaccount.blade.php" class="right">My Account</a>
 </div>

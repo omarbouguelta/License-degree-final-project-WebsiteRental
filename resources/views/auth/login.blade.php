@@ -88,7 +88,7 @@
 </head>
 <body>
 
-<a href="../" style="position: absolute; top: 5%; left: 5%; padding: 5px; border: solid 2px #f33c42; border-radius: 5px;"><img src="../../media/pfe logo.png" class="logo"></a>
+<a href="../index.php" style="position: absolute; top: 5%; left: 5%; padding: 5px; border: solid 2px #f33c42; border-radius: 5px;"><img src="../../media/pfe logo.png" class="logo"></a>
 
 
     <div class="background">
